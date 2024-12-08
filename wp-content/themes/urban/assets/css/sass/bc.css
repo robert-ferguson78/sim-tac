@@ -1,0 +1,21 @@
+:root {
+  --themecolor: #0095DA;
+  --ThemeDarkColor: #353b41;
+  --ThemeDarkColorContrast: hsla(0, 0%, 100%, .1);
+  --ThemeLightColor: rgb(229, 244, 251, 0.5);
+  --ThemeHoverColor: #0065BD;
+  --themebannertitle: #0095DA;
+  --bgthemelightcolor: #f5fafd;
+}
+
+.cardslist .carditem .cardinner .content a::after,
+.card_listed .card_listed_inner .card_listed_item a .content_pro .readmore_btn::after {
+  background: url(./../../img/right-arrowblue.png) no-repeat center;
+  background-size: contain;
+}
+
+@media screen and (max-width: 1200px) {
+  header .logo.sided {
+    right: 285px;
+  }
+}

@@ -1,0 +1,135 @@
+# Ignore WordPress core files
+wp-admin/
+wp-includes/
+wp-content/index.php
+wp-content/languages
+wp-content/plugins/index.php
+wp-content/themes/index.php
+
+# Ignore WordPress configuration file
+wp-config.php
+
+# Ignore files
+fw-flush-cache.php
+fw-status-check.php
+license.txt
+local-xdebuginfo.php
+readme.html
+wp-activate.php
+wp-blog-header.php
+wp-comments-post.php
+wp-config-sample.php
+wp-cron.php
+wp-links-opml.php
+wp-load.php
+wp-login.php
+wp-mail.php
+wp-settings.php
+wp-signup.php
+wp-trackback.php
+xmlrpc.php
+index.php
+wp-content/.defender-security-quarantine
+wp-content/wp-defender-secrets.php
+db-error.php
+
+# Ignore uploads directory
+wp-content/uploads/
+
+# Ignore default themes
+wp-content/themes/twenty*/
+
+# Ignore plugin and theme cache/temporary files
+wp-content/advanced-cache.php
+wp-content/backup-db/
+wp-content/backups/
+wp-content/logs/
+wp-content/upgrade-temp-backup
+wp-content/db-error.log
+wp-content/blogs.dir/
+wp-content/cache/
+wp-content/upgrade/
+wp-content/uploads/
+wp-content/mu-plugins/
+wp-content/wp-cache-config.php
+wp-content/plugins/hello.php
+
+# plugins
+wp-content/plugins/advanced-cron-manager
+wp-content/plugins/contact-form-7
+wp-content/plugins/contact-form-7-signature-addon
+wp-content/plugins/disable-comments
+wp-content/plugins/duracelltomi-google-tag-manager
+wp-content/plugins/production-open-pricing-name-your-price-for-wocommerce
+wp-content/plugins/recent-posts-widgeet-with-thumbnails
+wp-content/plugins/revslider
+wp-content/plugins/revslider-lottie-addon
+wp-content/plugins/revslider-sharing-addon
+wp-content/plugins/revslider-typewriter-addon
+wp-content/plugins/woo-checkout-field-editor-pro
+wp-content/plugins/woocommerce-gateway-stripe
+wp-content/plugins/woocommerce-google-analytics-integration
+wp-content/plugins/woocommerce-paypal-payments
+wp-content/plugins/wordpress-seo
+wp-content/plugins/wp-defender
+wp-content/plugins/wp-mail-smtp-pro
+wp-content/plugins/wpcf7-redirect
+wp-content/plugins/wpmudev-updates
+wp-content/plugins/recent-posts-widget-with-thumbnails
+wp-content/plugins/product-open-pricing-name-your-price-for-woocommerce
+wp-content/plugins/js_composer
+
+# plugins i want to keep
+wp-content/plugins/woocommerce/
+wp-content/plugins/the-events-calendar/
+wp-content/plugins/events-calendar-pro/
+wp-content/plugins/event-tickets-plus/
+wp-content/plugins/event-tickets/
+
+
+# Unignore the plugins directory
+!wp-content/plugins/event-tickets-plus/
+!wp-content/plugins/events-calendar-pro/
+
+# Ignore everything inside folder
+wp-content/plugins/event-tickets-plus/*
+wp-content/plugins/events-calendar-pro/*
+
+# Unignore the src directory inside event-tickets-plus
+!wp-content/plugins/event-tickets-plus/src/
+!wp-content/plugins/events-calendar-pro/src/
+
+# Ignore everything inside src
+wp-content/plugins/event-tickets-plus/src/*
+wp-content/plugins/events-calendar-pro/src/*
+
+# Unignore the views directory inside src
+!wp-content/plugins/event-tickets-plus/src/views/
+!wp-content/plugins/events-calendar-pro/src/views/
+
+# Ignore log files and databases
+*.log
+*.sql
+*.sqlite
+
+# Ignore OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Ignore node dependency directories
+node_modules/
+
+# Ignore composer dependencies
+vendor/
+
+# Ignore other common development files
+*.bak
+*.swp
+*.swo
+.idea/
+.vscode/

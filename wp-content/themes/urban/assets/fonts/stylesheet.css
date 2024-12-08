@@ -1,0 +1,11 @@
+@font-face {
+    font-family: 'Destroy';
+    src: url('Destroy.eot');
+    src: url('Destroy.eot?#iefix') format('embedded-opentype'),
+        url('Destroy.woff2') format('woff2'),
+        url('Destroy.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
