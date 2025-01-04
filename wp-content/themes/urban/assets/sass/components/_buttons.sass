@@ -1,0 +1,53 @@
+// Action Container
+.actions-2
+  display: flex
+  align-items: center
+  gap: spacing(sm)
+  margin-top: spacing(md)
+
+// Secondary Button Styles
+.style-secondary-smal-1,
+.style-secondary-smal-4
+  display: inline-flex
+  align-items: center
+  padding: spacing(sm) spacing(md)
+  border: 1px solid $black
+  transition: $transition-standard
+  
+  &:hover
+    background-color: $accent-yellow
+    color: $black
+  
+  &.reverse
+    background-color: $black
+    color: $white
+    
+    &:hover
+      background-color: $accent-yellow
+      color: $black
+
+.style-secondary-smal
+  padding: spacing(sm) spacing(md)
+// Link Style with Icon
+.style-link-small-fal
+  display: inline-flex
+  align-items: center
+  gap: spacing(xs)
+  cursor: pointer
+  
+  .icon
+    width: 1.67vw
+    height: 1.67vw
+    transition: transform 0.3s ease
+  
+  &:hover
+    .icon
+      transform: translateX(4px)
+
+// Button Text Styles
+.button-1,
+.button-4
+  &.textregularnormal
+    font-family: $font-family-roboto
+    font-size: $font-size-m
+    font-weight: $font-weight-normal

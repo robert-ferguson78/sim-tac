@@ -1,0 +1,48 @@
+.packages
+  &-item
+    align-items: flex-start
+    background-color: $white
+    display: flex
+    flex-direction: column
+    gap: 5.56vw
+    padding: 7.78vw 4.44vw
+    width: 100vw
+
+  .package-items
+    display: flex
+    flex-wrap: wrap
+    justify-content: center
+    gap: 30px
+    
+    .package-item
+      width: 23.3%
+      
+      .package-icon
+        text-align: center
+        margin-bottom: -15px
+      
+      .package-content
+        background-color: $white
+        border: solid #efefef .5px
+        border-radius: 15px
+        padding: 30px 15px 15px
+
+  .content-8
+    align-items: flex-start
+    align-self: stretch
+    flex-direction: column
+    gap: spacing(md)
+    width: 100%
+
+  .row
+    gap: spacing(md)
+    padding: spacing(xs) 0
+
+  +respond-to('tablet')
+    .package-item
+      width: 45.3%
+      margin-bottom: spacing(md)
+
+  +respond-to('mobile')
+    .package-item
+      width: 100%

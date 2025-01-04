@@ -1,0 +1,53 @@
+// Main Banner Structure
+.main_banner
+  position: relative
+  height: 80vh
+  display: flex
+  align-items: center
+  overflow: hidden
+  
+  .content
+    position: relative
+    z-index: 2
+    max-width: 75rem
+    margin: 0 auto
+    padding: spacing(xl) spacing(lg)
+    
+    h1
+      font-size: $font-size-xxxl
+      color: $white
+      margin-bottom: spacing(md)
+    
+    p
+      font-size: $font-size-l
+      color: $white
+      margin-bottom: spacing(lg)
+
+  // Background Overlay
+  &::after
+    content: ''
+    position: absolute
+    inset: 0
+    background: rgba($black, 0.4)
+    z-index: 1
+
+// Responsive Adjustments
++respond-to('tablet')
+  .main_banner
+    height: 60vh
+    
+    .content
+      padding: spacing(lg)
+      
+      h1
+        font-size: $font-size-xxl
+
++respond-to('mobile')
+  .main_banner
+    height: 50vh
+    
+    .content
+      padding: spacing(md)
+      
+      h1
+        font-size: $font-size-xl

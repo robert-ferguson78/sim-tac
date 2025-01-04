@@ -1,0 +1,49 @@
+// Breakpoint Management
+$breakpoints: ('mobile': 767px, 'tablet': 1023px, 'desktop': 1280px)
+
+@mixin respond-to($breakpoint)
+  @if map-has-key($breakpoints, $breakpoint)
+    @media screen and (max-width: map-get($breakpoints, $breakpoint))
+      @content
+      
+// Flexbox Helpers
+@mixin flex-center
+  display: flex
+  align-items: center
+  justify-content: center
+
+@mixin flex-column
+  display: flex
+  flex-direction: column
+
+// Typography Helpers
+@mixin text-truncate
+  overflow: hidden
+  text-overflow: ellipsis
+  white-space: nowrap
+
+// Interactive Elements
+@mixin hover-transition
+  transition: all 0.3s ease
+  
+  &:hover
+    @content
+
+// Image Handling
+@mixin aspect-ratio($width, $height)
+  position: relative
+  
+  &::before
+    content: ''
+    display: block
+    padding-top: ($height / $width) * 100%
+
+// Layout Mixins
+=section-padding
+  padding: spacing(xxl) spacing(lg)
+
+// Typography Mixins
+=heading-base
+  font-family: $font-family-roboto
+  font-weight: $font-weight-bold
+  margin-bottom: spacing(sm)

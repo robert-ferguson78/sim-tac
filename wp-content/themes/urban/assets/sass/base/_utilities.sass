@@ -1,0 +1,47 @@
+// Display Utilities
+.d-none
+  display: none
+.d-block
+  display: block
+.d-flex
+  display: flex
+
+// Flex Utilities
+.flex
+  &-row
+    flex-direction: row
+  &-column
+    flex-direction: column
+  &-wrap
+    flex-wrap: wrap
+  &-center
+    justify-content: center
+    align-items: center
+
+// Spacing Utilities
+@each $name, $value in $spacing
+  .m-#{$name}
+    margin: $value
+  .p-#{$name}
+    padding: $value
+  
+  @each $direction in (top, right, bottom, left)
+    .m#{str-slice($direction, 0, 1)}-#{$name}
+      margin-#{$direction}: $value
+    .p#{str-slice($direction, 0, 1)}-#{$name}
+      padding-#{$direction}: $value
+
+// Text Utilities
+.text
+  &-center
+    text-align: center
+  &-left
+    text-align: left
+  &-right
+    text-align: right
+
+// Visibility
+.visible
+  visibility: visible
+.invisible
+  visibility: hidden

@@ -1,0 +1,70 @@
+// Colors
+$black: #000000
+$white: #ffffff
+$celeste: #cccccc
+$granite-gray: #666666
+$accent-yellow: #f0a604
+$accent-green: #597f00
+
+// Spacing System
+$spacing-base: 1rem
+
+$spacing: (xxs: $spacing-base * 0.25, xs: $spacing-base * 0.5, sm: $spacing-base * 0.75, md: $spacing-base, lg: $spacing-base * 1.5, xl: $spacing-base * 2, xxl: $spacing-base * 3, xxxl: $spacing-base * 5)
+
+@function spacing($size)
+  @if map-has-key($spacing, $size)
+    @return map-get($spacing, $size)
+  @else
+    @error "Invalid spacing size: #{$size}."
+
+// Typography
+// Font Paths
+$font-path: '../fonts'
+
+// Font Families
+$font-destroy: 'Destroy', sans-serif
+$font-roboto: 'Roboto', sans-serif
+
+// Font Sources
+$destroy-eot: '#{$font-path}/destroy.eot'
+$destroy-woff2: '#{$font-path}/destroy.woff2'
+$destroy-woff: '#{$font-path}/destroy.woff'
+
+$font-family-roboto: "Roboto", Helvetica
+
+$font-size-xs: 12px
+$font-size-s: 14px
+$font-size-m: 16px
+$font-size-l: 18px
+$font-size-xl: 24px
+$font-size-xxl: 32px
+$font-size-xxxl: 48px
+$font-size-20: 20px
+$font-size-40: 40px
+$font-size-56: 56px
+
+// Font Weights
+$font-weight-normal: 400
+$font-weight-lightbold: 500
+$font-weight-semibold: 600
+$font-weight-bold: 700
+
+// Line Heights
+$line-height-xs: 1.2
+$line-height-sm: 1.4
+$line-height-md: 1.6
+$line-height-lg: 1.8
+$line-height-xl: 2
+$line-height-xxl: 2.2
+
+// Z-indexes
+$z-index-modal: 9999
+$z-index-overlay: 10
+
+// Transitions
+$transition-standard: all 0.3s ease
+
+// Breakpoints
+$breakpoint-mobile: 767px
+$breakpoint-tablet: 1023px
+$breakpoint-small: 500px

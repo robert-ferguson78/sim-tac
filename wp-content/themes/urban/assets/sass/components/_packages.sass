@@ -1,0 +1,51 @@
+// Packages Container
+.packages
+  .container-1
+    gap: spacing(md)
+  
+  &-item
+    align-items: flex-start
+    background-color: $white
+    display: flex
+    flex-direction: column
+    gap: spacing(xl)
+    padding: spacing(xxl) spacing(lg)
+    width: 100%
+
+  // Package Grid Layout
+  .package-items
+    display: flex
+    flex-wrap: wrap
+    justify-content: center
+    gap: spacing(lg)
+    
+    .package-item
+      width: calc(25% - #{spacing(lg)})
+      
+      .package-icon
+        text-align: center
+        margin-bottom: -#{spacing(sm)}
+      
+      .package-content
+        background-color: $white
+        border: 1px solid $celeste
+        border-radius: spacing(sm)
+        padding: spacing(lg) spacing(md) spacing(md)
+
+  // Package Button
+  .package-button
+    width: 100%
+    margin: spacing(lg) 0 spacing(sm)
+    padding: spacing(md)
+    border-radius: spacing(xs)
+    transition: background-color 0.3s ease
+
+  // Responsive Layout
+  +respond-to('tablet')
+    .package-item
+      width: calc(50% - #{spacing(lg)})
+      margin-bottom: spacing(lg)
+
+  +respond-to('mobile')
+    .package-item
+      width: 100%

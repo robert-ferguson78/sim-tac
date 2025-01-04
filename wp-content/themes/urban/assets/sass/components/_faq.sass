@@ -1,0 +1,48 @@
+.faq
+  &-accordion
+    margin-bottom: spacing(lg)
+    max-width: 75rem
+    margin: 0 auto
+
+  &-item
+    border: 1px solid $celeste
+    margin-bottom: spacing(sm)
+    border-radius: spacing(xxs)
+    
+    &.active
+      .faq-question
+        background-color: $accent-green
+        
+        &::after
+          content: '-'
+          transform: translateY(-50%) rotate(180deg)
+      
+      .faq-answer
+        padding: spacing(md)
+        max-height: 50rem
+
+  &-question
+    background-color: $accent-yellow
+    color: $white
+    padding: spacing(md) spacing(lg)
+    cursor: pointer
+    position: relative
+    transition: background-color 0.3s ease
+    
+    &::after
+      content: '+'
+      position: absolute
+      right: spacing(md)
+      top: 50%
+      transform: translateY(-50%)
+      font-size: $font-size-xl
+      transition: transform 0.3s ease
+
+  &-answer
+    padding: 0 spacing(md)
+    max-height: 0
+    overflow: hidden
+    transition: all 0.5s ease
+    
+    p
+      margin: spacing(sm) 0

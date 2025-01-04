@@ -1,0 +1,43 @@
+.home
+  .content-wrapper
+    display: block
+
+    .content
+      align-items: flex-start
+      flex: 1
+      flex-grow: 1
+
+    .column-2
+      align-items: center
+      display: inline-flex
+      gap: spacing(md)
+      position: relative
+
+    .content-1
+      align-items: flex-start
+      align-self: stretch
+      gap: spacing(xl)
+      padding: spacing(xl) spacing(lg)
+      width: 100%
+
+    .lorem-ipsum-dolor-si
+      align-self: stretch
+      color: $black
+      font-weight: $font-weight-normal
+      line-height: 1.6rem
+      margin-top: -0.07vw
+
+    .actions
+      display: inline-flex
+      gap: spacing(sm)
+
+    .header-13
+      height: auto
+
+    +respond-to('tablet')
+      .text,
+      .text-1,
+      .lorem-ipsum-dolor-si,
+      .medium-length-hero-headline-goes-here,
+      .heading
+        line-height: initial

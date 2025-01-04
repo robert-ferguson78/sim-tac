@@ -1,0 +1,50 @@
+// Grid System
+.grid
+  display: grid
+  gap: spacing(md)
+
+  &-2
+    grid-template-columns: repeat(2, 1fr)
+  
+  &-3
+    grid-template-columns: repeat(3, 1fr)
+  
+  &-4
+    grid-template-columns: repeat(4, 1fr)
+
+// Flex Utilities
+.flex
+  display: flex
+  
+  &-column
+    flex-direction: column
+  
+  &-center
+    +flex-center
+  
+  &-between
+    justify-content: space-between
+  
+  &-wrap
+    flex-wrap: wrap
+
+// Container
+.container
+  width: 100%
+  padding: spacing(lg)
+  margin: 0 auto
+  max-width: 1200px
+
+// Responsive Grid Adjustments
++respond-to('tablet')
+  .grid
+    &-4
+      grid-template-columns: repeat(2, 1fr)
+    
+    &-3
+      grid-template-columns: repeat(2, 1fr)
+
++respond-to('mobile')
+  .grid
+    &-4, &-3, &-2
+      grid-template-columns: 1fr

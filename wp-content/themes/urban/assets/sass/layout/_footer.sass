@@ -1,0 +1,84 @@
+// Main Footer Container
+footer
+  background-color: $white
+  padding: spacing(xl) 0
+  width: 100%
+
+// Footer Navigation
+.footernavbar
+  &.block_column
+    nav
+      .header_navlist
+        display: flex
+        gap: spacing(md)
+        margin: 0
+        padding: 0
+        list-style: none
+        
+        li
+          a
+            color: $black
+            font-size: $font-size-m
+            text-decoration: none
+            transition: $transition-standard
+            
+            &:hover
+              color: $accent-yellow
+
+// Social Links Section
+.social-links
+  margin: spacing(md) 0
+  
+  ul
+    display: flex
+    gap: spacing(sm)
+    margin: 0
+    padding: 0
+    list-style: none
+    
+    li
+      a
+        display: block
+        
+        img
+          height: 24px
+          width: auto
+          transition: $transition-standard
+          
+          &:hover
+            opacity: 0.8
+
+// Footer Credits
+.credits
+  margin-top: spacing(lg)
+  border-top: 1px solid $celeste
+  padding-top: spacing(md)
+  text-align: center
+  
+  p
+    color: $granite-gray
+    font-size: $font-size-s
+
+// Container Layout
+.container
+  max-width: 75rem
+  margin: 0 auto
+  padding: 0 spacing(lg)
+
+// Responsive Styles
++respond-to('tablet')
+  .container
+    padding: 0 spacing(md)
+  
+  .footernavbar
+    .header_navlist
+      flex-wrap: wrap
+      justify-content: center
+
++respond-to('mobile')
+  .container
+    padding: 0 spacing(sm)
+  
+  .social-links
+    ul
+      justify-content: center

@@ -1,0 +1,51 @@
+// Content Block Container
+.content-block
+  padding: spacing(xxl) 0
+  background-color: $white
+  
+  .container
+    max-width: 75rem
+    margin: 0 auto
+    padding: 0 spacing(lg)
+
+// Content Grid Layout
+.content-grid
+  display: grid
+  gap: spacing(xl)
+  
+  &-2
+    grid-template-columns: repeat(2, 1fr)
+  
+  &-3
+    grid-template-columns: repeat(3, 1fr)
+
+// Content Item Styling
+.content-item
+  display: flex
+  flex-direction: column
+  gap: spacing(md)
+  
+  .icon
+    width: spacing(xl)
+    height: spacing(xl)
+    margin-bottom: spacing(sm)
+  
+  h3
+    font-size: $font-size-xl
+    margin-bottom: spacing(sm)
+  
+  p
+    line-height: 1.6
+    color: $granite-gray
+
+// Responsive Adjustments
++respond-to('tablet')
+  .content-grid
+    &-3
+      grid-template-columns: repeat(2, 1fr)
+
++respond-to('mobile')
+  .content-grid
+    &-2,
+    &-3
+      grid-template-columns: 1fr
