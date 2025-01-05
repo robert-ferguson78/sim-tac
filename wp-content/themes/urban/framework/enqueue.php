@@ -9,9 +9,6 @@ function optimize_jquery() {
 
         wp_deregister_script('wp-embed');
 
-        wp_register_style('sitestyle', get_template_directory_uri() . '/assets/css/sass/main.css');
-        wp_enqueue_style('sitestyle');
-
         wp_register_style('mainstyle', get_template_directory_uri() . '/style.css','','6.0.3');
         wp_enqueue_style('mainstyle');
 

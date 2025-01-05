@@ -6,44 +6,51 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+              <link 
+                rel="preload" 
+                href="/wp-content/themes/urban/assets/fonts/Destroy.woff2" 
+                as="font" 
+                type="font/woff2" 
+                crossorigin="anonymous"
+                fetchpriority="high"
+              >
 
 <?php wp_head(); ?>
 </head>
 
-<body <?php body_class();?> >
+<body>
 <div class="wrap_header" id="header">
        <header>
             <div class="container">
                 <!-- LOGO -->
                 <div class="logo">
                     <a href="<?php echo esc_url( home_url( '/' ) ); ?>">
-                        <img class="img-fluid" src="<?php echo get_template_directory_uri() ?>/assets/img/logo.svg" alt="LOGO">
+                        <img class="img-fluid" src="<?php echo get_template_directory_uri() ?>/assets/img/urban-assault-log-trans.svg" alt="LOGO">
                     </a>
                 </div>
                 <!-- LOGO END -->
                 <!-- NAV -->
                 <div class="navbar">
                     <a href="#" class="navbarmenu">
-                        <div class="bar1"></div>
-                        <div class="bar2"></div>
-                        <div class="bar3"></div>
+                        <span class="bar1"></span>
+                        <span class="bar2"></span>
+                        <span class="bar3"></span>
                     </a>
                     <nav>
-                    <?php
-                        wp_nav_menu(
-                        array(
-                            'menu_class'    => 'header_navlist',
-                            'theme_location'  => 'primary',
-                            'container' => false,
-                        )
-                        );
-              ?>
+                        <?php
+                            wp_nav_menu(
+                            array(
+                                'menu_class'    => 'header_navlist',
+                                'theme_location'  => 'primary',
+                                'container' => false,
+                            )
+                            );
+                        ?>
                     </nav>
                 </div>
                 <!-- NAV END -->
                 <div class="rightbtn">
-                    <a href="#">
+                    <a href="/contact-us/">
                         Contact Us
                     </a>
                 </div>
@@ -51,3 +58,4 @@
        </header>
     </div>
        <div class="main_container">
+            <div class="content-wrapper">
